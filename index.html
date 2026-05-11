@@ -1,80 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SportCraft</title>
-    <link rel="stylesheet" href="style.css"> 
-    <link href="https://googleapis.com" rel="stylesheet">
-
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
 </head>
+
 <body>
 
-
     <div class="firstheader">
-        <a href="https://web.telegram.org/k/"><img class='tg' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQnj--2hfyMUlnLsuDxyxy8KHKK1NJ_0OW_g&s" alt=""></a>
-        <a href="https://www.facebook.com/"><img class="fb" src="https://i.pinimg.com/736x/23/6a/4e/236a4e7b01a79e5c18001dec5229865c.jpg" alt=""></a>
-        <a href="https://www.twitch.tv/"><img class="tw" src="https://i.pinimg.com/1200x/98/0a/87/980a87e37a17ba65bc41e89769c9af18.jpg" alt=""></a>
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1/"><img class="yt" src="https://i.pinimg.com/736x/48/a3/9c/48a39c5a6e347713a40d55ff13ea0aa0.jpg" alt=""></a>
+        <a href="#"><img class='tg' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQnj--2hfyMUlnLsuDxyxy8KHKK1NJ_0OW_g&s" alt="tg"></a>
+        <a href="#"><img class="fb" src="https://i.pinimg.com/736x/23/6a/4e/236a4e7b01a79e5c18001dec5229865c.jpg" alt="fb"></a>
+        <a href="#"><img class="tw" src="https://i.pinimg.com/1200x/98/0a/87/980a87e37a17ba65bc41e89769c9af18.jpg" alt="tw"></a>
+        <a href="#"><img class="yt" src="https://i.pinimg.com/736x/48/a3/9c/48a39c5a6e347713a40d55ff13ea0aa0.jpg" alt="yt"></a>
     </div>
 
+    <header class="header">
+        <h1 class="logo">SportCraft</h1>
+        <ul class="main-menu">
+            <li class="home"><a href="#">Головна</a></li>
+            <li>
+                <a href="#">Командний спорт</a>
+                <ul class="dropdown">
+                    <li><a href="#">Футбол</a></li>
+                    <li><a href="#">Баскетбол</a></li>
+                    <li><a href="#">Волейбол</a></li>
+                    <li><a href="#">Хокей</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Єдиноборства</a></li>
+            <li><a href="#">Водний спорт</a></li>
+            <li class="sd"><a href="#">Пасивний спорт</a></li>
+            <li><button class="subscribe-btn">Підписатися</button></li>
+        </ul>
+    </header>
 
-    <div class="header">
-    <h1>SportCraft</h1>
-    <ul class="main-menu">
-        <li class="home"><a href="#">Головна</a></li>
+    <main class="hero-container">
+        <div class="hero-grid">
+            <aside class="news-sidebar">
+                <div class="news-header">
+                    <span>Today News</span>
+                    <span class="arrow">→</span>
+                </div>
+                <div class="news-list">
+                    <div class="news-item">
+                        <img src="https://via.placeholder.com/50" alt="news">
+                        <p>World champions clash in a high-stakes tournament...</p>
+                    </div>
+                    <div class="news-item">
+                        <img src="https://via.placeholder.com/50" alt="news">
+                        <p>New Olympic records set in swimming finals today...</p>
+                    </div>
+                    <div class="news-item">
+                        <img src="https://via.placeholder.com/50" alt="news">
+                        <p>Basketball league finals highlights and results...</p>
+                    </div>
+                </div>
+            </aside>
 
+            <section class="main-banner">
+                <div class="banner-overlay">
+                    <h2>World champions clash in a high-stakes tournament as the race for Olympic qualification.</h2>
+                </div>
+                <img src="https://images.unsplash.com/photo-1599586120429-48281b6f0ece?q=80&w=1000" alt="Sport Action">
+            </section>
+        </div>
 
-        <li>
-            <a href="#">Командний спорт</a>
-            <ul class="dropdown">
-                <li><a href="#">Футбол</a></li>
-                <li><a href="#">Баскетбол</a></li>
-                <li><a href="#">Волейбол</a></li>
-                <li><a href="#">Хокей</a></li>
-            </ul>
-        </li>
+        <div class="search-section">
+            <div class="search-box">
+                <input type="text" placeholder="Search Content Here">
+                <button>Search</button>
+            </div>
+        </div>
+    </main>
 
-
-        <li><a href="#">Єдиноборства</a>
-                        <ul class="dropdown">
-                <li><a href="#">Бокс</a></li>
-                <li><a href="#">Боротьба</a></li>
-                <li><a href="#">Дзюдо</a></li>
-                <li><a href="#">Карате</a></li>
-                <li><a href="#">MMA</a></li>
-            </ul>
-        </li>
-
-
-        <li><a href="#">Водний спорт</a>
-                    <ul class="dropdown">
-                <li><a href="#">Плавання</a></li>
-                <li><a href="#">Водне поло</a></li>
-                <li><a href="#">Дайвінг</a></li>
-                <li><a href="#">Синхронне плавання</a></li>
-            </ul></li>
-
-
-                    <li class="sd"><a href="#">Пасивний спорт</a>
-                        <ul class="dropdown">
-                <li><a href="#">Гольф</a></li>
-                <li><a href="#">Більярд</a></li>
-                <li><a href="#">Дартс</a></li>
-                <li><a href="#">Шахи</a></li>
-                <li><a href="#">Боулінг</a></li>
-            </ul>
-        </li>
-        <li><button class="buttk">subscribe</button></li>
-    </ul>
-</div>
-<main>
-<h1>Welcome to SportCraft</h1>
-
-
-
-</main>
-
+    <div class="tablet-1">
+        <h1>Найкращі тренери</h1>
+        <div class="cards">
+            <div class="card">
+                <img class="card__img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Sir_Alex_Ferguson_2009.jpg/250px-Sir_Alex_Ferguson_2009.jpg" alt="Alex">
+                <div class="card-text">
+                    <h2>Алекс Фергюсон</h2>
+                    <p>Легендарний футбольний тренер Манчестер Юнайтед.</p>
+                </div>
+                <button class="card-button">Детальніше</button>
+            </div>
+            <div class="card">
+                <img class="card__img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Phil_Jackson_2011.jpg/250px-Phil_Jackson_2011.jpg" alt="Phil">
+                <div class="card-text">
+                    <h2>Філ Джексон</h2>
+                    <p>Легендарний баскетбольний тренер (11 титулів НБА).</p>
+                </div>
+                <button class="card-button">Детальніше</button>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>

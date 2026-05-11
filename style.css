@@ -1,120 +1,258 @@
-.firstheader {
-    display: flex;
-    justify-content: end;
-    background-color: black;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f7f8;
 }
 
-.tg {
-    width: 20px;
-  height: auto;
-}
-.fb {
-    width: 20px;
-  height: auto;
-  margin-left: 5px;
+/* --- Хедер та соцмережі --- */
+.firstheader {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #000;
+    padding: 5px 20px;
 }
 
-.tw {
-    width: 20px;
-  height: auto;
-  margin-left: 5px;
-}
-
-.yt {
-    width: 20px;
-  height: auto;
-  margin-right: 20px;
-  margin-left: 5px;
+.firstheader img {
+    width: 18px;
+    height: auto;
+    margin-left: 10px;
 }
 
 .header {
     display: flex;
     align-items: center;
-    justify-content: space-between; 
-    background-color:  hsl(187, 52%, 80%); 
-    padding: 0 20px;
-        color: #2F4F4F;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 15px 40px;
+    border-bottom: 1px solid #eee;
+}
+
+.logo {
+    color: #2F4F4F;
+    font-size: 24px;
 }
 
 .main-menu {
     display: flex;
     list-style: none;
-    margin: 0;
-    padding: 0;
-    
+    align-items: center;
 }
 
 .main-menu > li {
     position: relative;
-}
-
-
-.dropdown {
-    display: block;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #E0FFFF;
-    list-style: none;
-    margin: 0;
-    padding: 10px;
-    border: 1px solid rgb(65, 90, 90. 0);
-    box-shadow: 0 0 10px rgba(47, 79, 79, 0.3), 10px 15px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.2s;
-}
-
-li:hover .dropdown {
-    opacity: 1;
-    visibility: visible;
+    margin: 0 10px;
 }
 
 .main-menu a {
     text-decoration: none;
-    color: rgb(47, 79, 79);
-    padding: 10px 15px;
-    display: block;
-    font-family: 'Montserrat', sans-serif;
+    color: #444;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 5px 0;
 }
 
-.buttk {
-    background-color: #2F4F4F; 
-    color: rgb(225, 255, 245);
+.subscribe-btn {
+    background-color: #4a686b;
+    color: white;
     border: none;
-    padding: 8px 20px;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    border-radius: 20px;  
+    padding: 8px 15px;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 20px;
-    margin-right: 15px;
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
-.buttk:hover{
-    transform: scale(1.1);
-    transition: 0.5s;
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+/* --- ВИПАДАЮЧЕ МЕНЮ --- */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    list-style: none;
+    padding: 10px 0;
+    z-index: 100;
+    border-radius: 5px;
 }
 
-.sd {
-    margin-right: 30px;
+.main-menu li:hover .dropdown {
+    display: block;
 }
 
+.dropdown a {
+    padding: 10px 20px;
+    display: block;
+}
 
-.home {
-    text-decoration-line: underline;             
-    text-decoration-color: rgb(47, 79, 79);
-    text-decoration-thickness: 3px;      
-    text-underline-offset: 6px;     
+.dropdown a:hover {
+    background-color: #f0f0f0;
+}
+
+/* --- HERO SECTION (НОВЕ) --- */
+.hero-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 20px;
+}
+
+/* Sidebar News */
+.news-sidebar {
+    background-color: #62868a;
+    border-radius: 12px;
+    color: white;
+    overflow: hidden;
+}
+
+.news-header {
+    background: #4a686b;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.news-list {
+    padding: 15px;
+}
+
+.news-item {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 15px;
+    align-items: center;
+    font-size: 13px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 10px;
+}
+
+.news-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+/* Main Banner */
+.main-banner {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 380px;
+}
+
+.main-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    padding: 0 40px;
+    text-align: center;
+    z-index: 2;
+}
+
+.banner-overlay h2 {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 15px;
+    border-radius: 10px;
+    color: #2F4F4F;
+    font-size: 1.2rem;
+}
+
+/* Search Bar */
+.search-section {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.search-box {
+    display: flex;
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border: 1px solid #ddd;
+}
+
+.search-box input {
+    flex: 1;
+    border: none;
+    padding: 12px 20px;
+    outline: none;
+}
+
+.search-box button {
+    background: #62868a;
+    color: white;
+    border: none;
+    padding: 0 25px;
+    cursor: pointer;
+}
+
+/* --- СЕКЦІЯ ТРЕНЕРІВ --- */
+.tablet-1 {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background: #5F8288;
+    padding: 50px 20px;
+}
+
+.card {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 15px;
+    padding: 30px;
+    width: 300px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.card__img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 3px solid white;
+}
+
+.card-button {
+    background: #2F4F4F;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card-button:hover {
+    background: #1a2e2e;
 }
