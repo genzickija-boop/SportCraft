@@ -93,7 +93,7 @@ body {
     background-color: #f0f0f0;
 }
 
-/* --- HERO SECTION (НОВЕ) --- */
+/* --- HERO SECTION --- */
 .hero-container {
     max-width: 1200px;
     margin: 30px auto;
@@ -102,11 +102,11 @@ body {
 
 .hero-grid {
     display: grid;
-    grid-template-columns: 320px 1fr;
+    grid-template-columns: 350px 1fr;
     gap: 20px;
 }
 
-/* Sidebar News */
+/* Ліва колонка новин */
 .news-sidebar {
     background-color: #62868a;
     border-radius: 12px;
@@ -137,21 +137,40 @@ body {
 }
 
 .news-item img {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 5px;
     object-fit: cover;
 }
 
-/* Main Banner */
+/* Права колонка - Слайдер */
 .main-banner {
     position: relative;
     border-radius: 12px;
     overflow: hidden;
     height: 380px;
+    background-color: #000;
 }
 
-.main-banner img {
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s ease-in-out, visibility 0.8s;
+    z-index: 1;
+}
+
+.slide.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+}
+
+.slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -164,7 +183,7 @@ body {
     width: 100%;
     padding: 0 40px;
     text-align: center;
-    z-index: 2;
+    z-index: 3;
 }
 
 .banner-overlay h2 {
@@ -173,9 +192,10 @@ body {
     border-radius: 10px;
     color: #2F4F4F;
     font-size: 1.2rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* Search Bar */
+/* Пошук */
 .search-section {
     margin-top: 30px;
     display: flex;
@@ -206,6 +226,7 @@ body {
     border: none;
     padding: 0 25px;
     cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* --- СЕКЦІЯ ТРЕНЕРІВ --- */
@@ -251,6 +272,7 @@ body {
     border-radius: 20px;
     cursor: pointer;
     transition: 0.3s;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .card-button:hover {
